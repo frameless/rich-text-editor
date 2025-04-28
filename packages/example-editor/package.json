@@ -19,8 +19,8 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "typescript": "5.8.2",
-    "vite": "6.2.0"
+    "typescript": "5.8.3",
+    "vite": "6.3.3"
   },
   "dependencies": {
     "@tiptap/core": "2.11.7",
@@ -38,7 +38,7 @@
     "@utrecht/page-layout-css": "1.1.0",
     "@utrecht/paragraph-css": "2.3.0",
     "@utrecht/root-css": "1.2.0",
-    "@utrecht/table-css": "1.5.0",
+    "@utrecht/table-css": "1.6.0",
     "@utrecht/unordered-list-css": "1.5.0",
     "@utrecht/web-component-library-stencil": "3.4.0",
     "prosemirror-model": "1.25.1"
