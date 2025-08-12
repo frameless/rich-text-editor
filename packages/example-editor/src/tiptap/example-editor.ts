@@ -64,6 +64,51 @@ class ExampleEditorElement extends HTMLElement {
       ],
       content,
     });
+
+    // CHROME
+    const container = document.getElementById('editor-chrome');
+    if (!container) return;
+
+    // STRONG
+    const strong = this.ownerDocument.createElement('button');
+    strong.innerHTML = '<strong>Vet</strong>';
+    strong.onclick = () => {
+      this.editor.chain().focus().toggleStrong().run();
+    };
+    container.appendChild(strong);
+
+    // EMPHASIS
+    const emphasis = this.ownerDocument.createElement('button');
+    emphasis.innerHTML = '<em>Schuin</em>';
+    emphasis.onclick = () => {
+      this.editor.chain().focus().toggleEmphasis().run();
+    };
+    container.appendChild(emphasis);
+
+    // PARAGRAPH
+    const paragraph = this.ownerDocument.createElement('button');
+    paragraph.innerHTML = 'Paragraaf';
+    paragraph.onclick = () => {
+      this.editor.chain().focus().setParagraph().run();
+    };
+    container.appendChild(paragraph);
+
+    // HEADING
+    const heading = this.ownerDocument.createElement('select');
+    for (let i = 0; i < 7; i++) {
+      let option = this.ownerDocument.createElement('option');
+      if (i === 0) {
+        option.innerHTML = 'Kopniveau';
+      } else {
+        option.innerHTML = 'H' + i;
+      }
+      heading.appendChild(option);
+    }
+    heading.onchange = (e) => {
+      let elt = e.target as HTMLSelectElement;
+      if (elt) this.editor.chain().focus().toggleHeading({ level: elt.selectedIndex }).run();
+    };
+    container.appendChild(heading);
   }
 }
 

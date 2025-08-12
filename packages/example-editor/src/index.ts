@@ -77,6 +77,16 @@ document.addEventListener<any>('validationError', (evt: ValidationEvent) => {
         url: 'https://nldesignsystem.nl/richtlijnen/content/tekstopmaak/tekst-benadrukken',
       },
       {
+        id: 'style-strong-in-heading',
+        message: 'Gebruik geen vette tekst in een Kop, dat valt niet altijd voldoende op.',
+        url: 'https://nldesignsystem.nl/richtlijnen/content/tekstopmaak/tekst-benadrukken',
+      },
+      {
+        id: 'style-emphasis-in-heading',
+        message: 'Gebruik geen schuine in een Kop, dat valt niet altijd voldoende op.',
+        url: 'https://nldesignsystem.nl/richtlijnen/content/tekstopmaak/tekst-benadrukken',
+      },
+      {
         id: 'page-has-multiple-heading-one',
         message: 'Gebruik Kop-niveau 1 alleen voor de eerste Kop, gebruik daarna niveau 2.',
         url: 'https://nldesignsystem.nl/wcag/1.3.1',

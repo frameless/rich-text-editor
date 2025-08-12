@@ -17,7 +17,9 @@ import {
   PageStartsWithHeadingOneError,
   ParagraphEmptyError,
   StyleBoldInHeadingError,
+  StyleEmphasisInHeadingError,
   StyleItalicInHeadingError,
+  StyleStrongInHeadingError,
   TableNeedsMultipleRowsError,
 } from './validation-error';
 
@@ -49,9 +51,17 @@ const isBold = (mark: Mark): boolean => mark.type.name === 'bold';
 
 const hasBold = (node: Node): boolean => node.marks.some(isBold);
 
-// const isItalic = (mark: Mark): boolean => mark.type.name === 'italic';
+const isItalic = (mark: Mark): boolean => mark.type.name === 'italic';
 
-const hasItalic = (node: Node): boolean => node.marks.some(isBold);
+const hasItalic = (node: Node): boolean => node.marks.some(isItalic);
+
+const isStrong = (mark: Mark): boolean => mark.type.name === 'strong';
+
+const hasStrong = (node: Node): boolean => node.marks.some(isStrong);
+
+const isEmphasis = (mark: Mark): boolean => mark.type.name === 'emphasis';
+
+const hasEmphasis = (node: Node): boolean => node.marks.some(isEmphasis);
 
 const isTable = (node: Node): boolean => node.type.name === 'table';
 
@@ -72,6 +82,7 @@ const validateDocument = (doc: Node): Error[] => {
   const documentErrors = [];
 
   if (!isHeading1(doc.content.content[0])) {
+    console.log(doc.content.content[0]);
     documentErrors.push(new PageStartsWithHeadingOneError());
   }
 
@@ -175,6 +186,12 @@ const validateDocument = (doc: Node): Error[] => {
         if (hasItalic(node)) {
           errors.push(new StyleItalicInHeadingError());
         }
+        if (hasStrong(node)) {
+          errors.push(new StyleStrongInHeadingError());
+        }
+        if (hasEmphasis(node)) {
+          errors.push(new StyleEmphasisInHeadingError());
+        }
       });
     }
     return errors;
@@ -187,7 +204,7 @@ export const Validation = Extension.create<ValidationOptions>({
   name: 'validation',
 
   // @ts-ignore
-  onUpdate({ editor, transaction }) {
+  onUpdate({ transaction }) {
     console.time('validation');
     let errors;
     errors = validateDocument(transaction.doc);

@@ -51,6 +51,18 @@ export class StyleItalicInHeadingError extends Error implements ValidationError 
     super('Must not use italic inside a heading');
   }
 }
+export class StyleStrongInHeadingError extends Error implements ValidationError {
+  id = 'style-strong-in-heading';
+  constructor() {
+    super('Must not use strong inside a heading');
+  }
+}
+export class StyleEmphasisInHeadingError extends Error implements ValidationError {
+  id = 'style-emphasis-in-heading';
+  constructor() {
+    super('Must not use emphasis inside a heading');
+  }
+}
 
 export class PageHasMultipleHeadingOneError extends Error implements ValidationError {
   id = 'page-has-multiple-heading-one';

@@ -77,16 +77,6 @@
       ],
       "files": ["*.ts", "*.tsx"],
       "parser": "@typescript-eslint/parser",
-      "parserOptions": {
-        "project": [
-          "packages/storybook/tsconfig.json",
-          "packages/web-components-react/tsconfig.json",
-          "packages/components-react/tsconfig.json",
-          "packages/components-react/tsconfig.test.json",
-          "packages/web-components-stencil/tsconfig.json",
-          "packages/web-components-stencil/tsconfig.jest.json"
-        ]
-      },
       "plugins": ["@typescript-eslint"]
     }
   ]

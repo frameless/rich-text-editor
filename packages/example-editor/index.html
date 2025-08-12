@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <link href="https://unpkg.com/@nl-design-system-unstable/basis-design-tokens/dist/variables.css" rel="stylesheet" />
   </head>
+
   <body class="utrecht-body">
     <utrecht-page-layout>
       <utrecht-page-body>
@@ -106,7 +107,9 @@
                 </tr>
               </table>
               <utrecht-paragraph>Data list:</utrecht-paragraph>
-              <dl><dt>foo</dt></dl>
+              <dl>
+                <dt>foo</dt>
+              </dl>
               <utrecht-paragraph>Data list with empty key:</utrecht-paragraph>
               <dl>
                 <dt></dt>
@@ -129,7 +132,8 @@
           </example-editor>
           <div class="sidebar">
             <ol id="error-list" role="list"></ol>
-          </div></div></utrecht-page-body
+          </div>
+        </div> </utrecht-page-body
     ></utrecht-page-layout>
     <style>
       .split-screen {
@@ -137,12 +141,15 @@
         flex-direction: row;
         column-gap: max(var(--utrecht-focus-outline-width), 0);
       }
+
       example-editor {
         flex-grow: 1;
       }
+
       .sidebar {
         inline-size: 300px;
       }
+
       #error-list {
         list-style: none;
         padding: 0;
@@ -157,6 +164,7 @@
         --utrecht-alert-ok-border-color: currentColor;
         --utrecht-alert-warning-border-color: currentColor;
       }
+
       .ProseMirror-focused,
       .focus-ring:focus-visible {
         --_utrecht-focus-ring-box-shadow: 0 0 0 var(--utrecht-focus-outline-width, 0)
