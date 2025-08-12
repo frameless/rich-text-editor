@@ -66,7 +66,7 @@ class ExampleEditorElement extends HTMLElement {
     });
 
     // CHROME
-    const container = document.getElementById('editor-chrome');
+    const container = document.getElementById('editor-toolbar');
     if (!container) return;
 
     // STRONG
