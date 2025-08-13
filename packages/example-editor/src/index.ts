@@ -139,6 +139,7 @@ document.addEventListener<any>('validationError', (evt: ValidationEvent) => {
         url: 'https://nldesignsystem.nl/richtlijnen/content/tekstopmaak/koppen/#kopniveaus',
       },
     ];
+
     let message = e.message;
     const error = messages.find(({ id }) => id === e.id);
 
@@ -150,5 +151,6 @@ document.addEventListener<any>('validationError', (evt: ValidationEvent) => {
       }
     }
     result.innerHTML += `<li><utrecht-alert type="error">${message}</utrecht-alert></li>`;
+
   });
 });
