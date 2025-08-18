@@ -26,6 +26,7 @@
     "@tiptap/core": "2.11.7",
     "@tiptap/pm": "2.11.7",
     "@utrecht/body-css": "1.2.0",
+    "@utrecht/button-css": "2.3.1",
     "@utrecht/heading-1-css": "1.5.0",
     "@utrecht/heading-2-css": "1.5.0",
     "@utrecht/heading-3-css": "1.5.0",

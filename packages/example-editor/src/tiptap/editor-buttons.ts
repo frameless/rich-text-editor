@@ -1,14 +1,14 @@
-import { Editor, NodePos } from "@tiptap/core";
+import { Editor } from "@tiptap/core";
+import { UtrechtSelect } from "../custom-element/utrecht-select";
 
-export default function EditorButtons(editor:Editor, root:Document) {
-  console.log(editor, root);
+export default function EditorButtons(editor:Editor, doc:Document) {
 
   // CHROME
   const container = document.getElementById('editor-toolbar');
   if (!container) return;
 
   // STRONG
-  const strong = root.createElement('button');
+  const strong = doc.createElement('utrecht-button');
   strong.innerHTML = '<strong>Vet</strong>';
   strong.onclick = () => {
     editor.chain().focus().toggleStrong().run();
@@ -16,7 +16,7 @@ export default function EditorButtons(editor:Editor, root:Document) {
   container.appendChild(strong);
 
   // EMPHASIS
-  const emphasis = root.createElement('button');
+  const emphasis = doc.createElement('utrecht-button');
   emphasis.innerHTML = '<em>Schuin</em>';
   emphasis.onclick = () => {
     editor.chain().focus().toggleEmphasis().run();
@@ -24,7 +24,7 @@ export default function EditorButtons(editor:Editor, root:Document) {
   container.appendChild(emphasis);
 
   // PARAGRAPH
-  const paragraph = root.createElement('button');
+  const paragraph = doc.createElement('utrecht-button');
   paragraph.innerHTML = 'Paragraaf';
   paragraph.onclick = () => {
     editor.chain().focus().setParagraph().run();
@@ -32,9 +32,9 @@ export default function EditorButtons(editor:Editor, root:Document) {
   container.appendChild(paragraph);
 
   // HEADING
-  const heading = root.createElement('select');
+  const heading = doc.createElement('select');
   for (let i = 0; i < 7; i++) {
-    let option = root.createElement('option');
+    let option = doc.createElement('option');
     if (i === 0) {
       option.innerHTML = 'Kop';
     } else {
@@ -44,7 +44,7 @@ export default function EditorButtons(editor:Editor, root:Document) {
   }
 
   // SHOW ONLY ALLOWED LEVELS AT CURRENT POSITION
-  heading.onpointerenter = (e) => {
+  heading.onfocus = (e) => {
     const state = editor.view.state;
     const from = state.selection.from;
     const pos = state.doc.resolve(from);
@@ -57,23 +57,22 @@ export default function EditorButtons(editor:Editor, root:Document) {
       if(node.type['name'] === 'heading' && node !== current) headings.push(node);
     })
 
-    if(headings.length) {
-      const max = headings[headings.length - 1].attrs.level + 1; // STARTING LEVEL IS LAST HEADING BEFORE THIS
-      for(let i = 1; i < heading.options.length; i++){
-        if(i <= max) heading.options[i].disabled = false;
-        else heading.options[i].disabled = true;
-      }
-    } else {
-      for(let i = 0; i < heading.options.length; i++){
-        heading.options[i].disabled = false;
-      }
+    let max = 1;
+
+    if(headings.length) max = headings[headings.length - 1].attrs.level + 1; // STARTING LEVEL IS LAST HEADING BEFORE THIS
+
+    for(let i = 1; i < heading.options.length; i++){
+      if(i <= max) heading.options[i].disabled = false;
+      else heading.options[i].disabled = true;
     }
+
+    heading.selectedIndex = current.attrs['level'] ? current.attrs['level'] : 0;
 
   }
 
   heading.onchange = (e) => {
-    let elt = e.target as HTMLSelectElement;
-    if (elt) editor.chain().focus().toggleHeading({ level: elt.selectedIndex }).run();
+    editor.chain().focus().setHeading({ level: heading.selectedIndex }).run();
   };
+
   container.appendChild(heading);
 }
