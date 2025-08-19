@@ -1,182 +1,172 @@
 <!doctype html>
 <html class="utrecht-root">
-  <head>
-    <meta charset="utf-8" />
-    <link href="https://unpkg.com/@nl-design-system-unstable/basis-design-tokens/dist/variables.css" rel="stylesheet" />
-  </head>
 
-  <body class="utrecht-body">
-    <utrecht-page-layout>
-      <utrecht-page-body>
-        <div class="element"></div>
-        <script type="module" src="./src/index.js"></script>
-        <div class="split-screen">
-          <example-editor>
-            <template>
-              <utrecht-heading level="1">Heading</utrecht-heading>
-              <utrecht-heading level="2">Heading</utrecht-heading>
-              <utrecht-heading level="3">Heading</utrecht-heading>
-              <utrecht-heading level="4">Heading</utrecht-heading>
-              <utrecht-heading level="5">Heading</utrecht-heading>
-              <utrecht-heading level="6">Heading</utrecht-heading>
-              <utrecht-heading level="7">Heading 7</utrecht-heading>
-              <utrecht-heading level="6"><b>Bold move to use b in an heading</b></utrecht-heading>
-              <utrecht-heading level="6"><i>Bold move to use i in an heading</i></utrecht-heading>
-              <utrecht-paragraph>Edit me!</utrecht-paragraph>
-              <utrecht-paragraph>Text <b>in bold</b></utrecht-paragraph>
-              <utrecht-paragraph>Text <i>in italic</i></utrecht-paragraph>
-              <utrecht-paragraph>Text <em>with emphasis</em></utrecht-paragraph>
-              <utrecht-paragraph>Text <strong>with strong emphasis</strong></utrecht-paragraph>
-              <utrecht-paragraph>Text <u>with underline</u></utrecht-paragraph>
-              <utrecht-paragraph
-                >Text <utrecht-link href="HTTPS://EXAMPLE.COM/">with link</utrecht-link></utrecht-paragraph
-              >
-              <utrecht-paragraph
-                >Empty link: <utrecht-link href="HTTPS://EXAMPLE.COM/">...</utrecht-link></utrecht-paragraph
-              >
-              <img src="avatar.png" alt="" width="64" height="64" />
-              <utrecht-heading level="6"></utrecht-heading
-              ><!-- empty heading, oh no! -->
-              <utrecht-paragraph></utrecht-paragraph
-              ><!-- empty paragraph, oh no! -->
-              <utrecht-paragraph>&nbsp;</utrecht-paragraph
-              ><!-- empty-ish paragraph, oh no! -->
-              <utrecht-paragraph>- fake list item</utrecht-paragraph>
-              <utrecht-paragraph>- fake list item</utrecht-paragraph>
-              <utrecht-paragraph>- fake list item</utrecht-paragraph>
-              <utrecht-paragraph>- fake list item</utrecht-paragraph>
-              <utrecht-heading level="2">Unordered List example</utrecht-heading>
-              <utrecht-unordered-list>
-                <utrecht-unordered-list-item
-                  ><utrecht-paragraph>actual list item</utrecht-paragraph></utrecht-unordered-list-item
-                >
-                <utrecht-unordered-list-item
-                  ><utrecht-paragraph>actual list item</utrecht-paragraph></utrecht-unordered-list-item
-                >
-                <utrecht-unordered-list-item
-                  ><utrecht-paragraph>actual list item</utrecht-paragraph></utrecht-unordered-list-item
-                >
-              </utrecht-unordered-list>
-              <utrecht-heading level="2">Ordered List example</utrecht-heading>
-              <utrecht-ordered-list>
-                <utrecht-ordered-list-item
-                  ><utrecht-paragraph>actual list item</utrecht-paragraph></utrecht-ordered-list-item
-                >
-                <utrecht-ordered-list-item
-                  ><utrecht-paragraph>actual list item</utrecht-paragraph></utrecht-ordered-list-item
-                >
-                <utrecht-ordered-list-item
-                  ><utrecht-paragraph>actual list item</utrecht-paragraph></utrecht-ordered-list-item
-                >
-              </utrecht-ordered-list>
-              <table>
-                <tbody>
-                  <tr>
-                    <th>Table Header</th>
-                    <td>Table cell</td>
-                  </tr>
-                </tbody>
-              </table>
-              <table>
-                <caption>
-                  Table with 3 rows
-                </caption>
+<head>
+  <meta charset="utf-8" />
+  <link href="https://unpkg.com/@nl-design-system-unstable/basis-design-tokens/dist/variables.css" rel="stylesheet" />
+</head>
+
+<body class="utrecht-body">
+  <utrecht-page-layout>
+    <utrecht-page-body>
+      <div class="element"></div>
+      <script type="module" src="./src/index.js"></script>
+      <div class="split-screen">
+        <example-editor>
+          <template>
+            <utrecht-heading level="1">Heading</utrecht-heading>
+            <utrecht-heading level="2">Heading</utrecht-heading>
+            <utrecht-heading level="3">Heading</utrecht-heading>
+            <utrecht-heading level="4">Heading</utrecht-heading>
+            <utrecht-heading level="5">Heading</utrecht-heading>
+            <utrecht-heading level="6">Heading</utrecht-heading>
+            <utrecht-heading level="7">Heading 7</utrecht-heading>
+            <utrecht-heading level="6"><b>Bold move to use b in an heading</b></utrecht-heading>
+            <utrecht-heading level="6"><i>Bold move to use i in an heading</i></utrecht-heading>
+            <utrecht-paragraph>Edit me!</utrecht-paragraph>
+            <utrecht-paragraph>Text <b>in bold</b></utrecht-paragraph>
+            <utrecht-paragraph>Text <i>in italic</i></utrecht-paragraph>
+            <utrecht-paragraph>Text <em>with emphasis</em></utrecht-paragraph>
+            <utrecht-paragraph>Text <strong>with strong emphasis</strong></utrecht-paragraph>
+            <utrecht-paragraph>Text <u>with underline</u></utrecht-paragraph>
+            <utrecht-paragraph>Text <utrecht-link href="HTTPS://EXAMPLE.COM/">with
+                link</utrecht-link></utrecht-paragraph>
+            <utrecht-paragraph>Empty link: <utrecht-link
+                href="HTTPS://EXAMPLE.COM/">...</utrecht-link></utrecht-paragraph>
+            <img src="avatar.png" alt="" width="64" height="64" />
+            <utrecht-heading level="6"></utrecht-heading><!-- empty heading, oh no! -->
+            <utrecht-paragraph></utrecht-paragraph><!-- empty paragraph, oh no! -->
+            <utrecht-paragraph>&nbsp;</utrecht-paragraph><!-- empty-ish paragraph, oh no! -->
+            <utrecht-paragraph>- fake list item</utrecht-paragraph>
+            <utrecht-paragraph>- fake list item</utrecht-paragraph>
+            <utrecht-paragraph>- fake list item</utrecht-paragraph>
+            <utrecht-paragraph>- fake list item</utrecht-paragraph>
+            <utrecht-heading level="2">Unordered List example</utrecht-heading>
+            <utrecht-unordered-list>
+              <utrecht-unordered-list-item><utrecht-paragraph>actual list
+                  item</utrecht-paragraph></utrecht-unordered-list-item>
+              <utrecht-unordered-list-item><utrecht-paragraph>actual list
+                  item</utrecht-paragraph></utrecht-unordered-list-item>
+              <utrecht-unordered-list-item><utrecht-paragraph>actual list
+                  item</utrecht-paragraph></utrecht-unordered-list-item>
+            </utrecht-unordered-list>
+            <utrecht-heading level="2">Ordered List example</utrecht-heading>
+            <utrecht-ordered-list>
+              <utrecht-ordered-list-item><utrecht-paragraph>actual list
+                  item</utrecht-paragraph></utrecht-ordered-list-item>
+              <utrecht-ordered-list-item><utrecht-paragraph>actual list
+                  item</utrecht-paragraph></utrecht-ordered-list-item>
+              <utrecht-ordered-list-item><utrecht-paragraph>actual list
+                  item</utrecht-paragraph></utrecht-ordered-list-item>
+            </utrecht-ordered-list>
+            <table>
+              <tbody>
                 <tr>
                   <th>Table Header</th>
                   <td>Table cell</td>
                 </tr>
-                <tr>
-                  <th>Table Header</th>
-                  <td>Table cell</td>
-                </tr>
-                <tr>
-                  <th>Table Header</th>
-                  <td>Table cell</td>
-                </tr>
-              </table>
-              <utrecht-paragraph>Table with empty caption:</utrecht-paragraph>
-              <table>
-                <caption></caption>
-                <tr>
-                  <th>Table Header</th>
-                  <td>Table cell</td>
-                </tr>
-                <tr>
-                  <th>Table Header</th>
-                  <td>Table cell</td>
-                </tr>
-              </table>
-              <utrecht-paragraph>Data list:</utrecht-paragraph>
-              <dl>
-                <dt>foo</dt>
-              </dl>
-              <utrecht-paragraph>Data list with empty key:</utrecht-paragraph>
-              <dl>
-                <dt></dt>
-                <dd>value</dd>
-              </dl>
-              <utrecht-paragraph>Data list with empty value:</utrecht-paragraph>
-              <dl>
-                <dt>key</dt>
-                <dd></dd>
-              </dl>
-              <utrecht-paragraph>Data list without term:</utrecht-paragraph>
-              <dl>
-                <dd>value</dd>
-              </dl>
-              <utrecht-paragraph>Data list without value:</utrecht-paragraph>
-              <dl>
-                <dt>key</dt>
-              </dl>
-            </template>
-          </example-editor>
-          <div class="sidebar">
-            <ol id="error-list" role="list"></ol>
-          </div>
-        </div> </utrecht-page-body
-    ></utrecht-page-layout>
-    <style>
-      .split-screen {
-        display: flex;
-        flex-direction: row;
-        column-gap: max(var(--utrecht-focus-outline-width), 0);
-      }
+              </tbody>
+            </table>
+            <table>
+              <caption>
+                Table with 3 rows
+              </caption>
+              <tr>
+                <th>Table Header</th>
+                <td>Table cell</td>
+              </tr>
+              <tr>
+                <th>Table Header</th>
+                <td>Table cell</td>
+              </tr>
+              <tr>
+                <th>Table Header</th>
+                <td>Table cell</td>
+              </tr>
+            </table>
+            <utrecht-paragraph>Table with empty caption:</utrecht-paragraph>
+            <table>
+              <caption></caption>
+              <tr>
+                <th>Table Header</th>
+                <td>Table cell</td>
+              </tr>
+              <tr>
+                <th>Table Header</th>
+                <td>Table cell</td>
+              </tr>
+            </table>
+            <utrecht-paragraph>Data list:</utrecht-paragraph>
+            <dl>
+              <dt>foo</dt>
+            </dl>
+            <utrecht-paragraph>Data list with empty key:</utrecht-paragraph>
+            <dl>
+              <dt></dt>
+              <dd>value</dd>
+            </dl>
+            <utrecht-paragraph>Data list with empty value:</utrecht-paragraph>
+            <dl>
+              <dt>key</dt>
+              <dd></dd>
+            </dl>
+            <utrecht-paragraph>Data list without term:</utrecht-paragraph>
+            <dl>
+              <dd>value</dd>
+            </dl>
+            <utrecht-paragraph>Data list without value:</utrecht-paragraph>
+            <dl>
+              <dt>key</dt>
+            </dl>
+          </template>
+        </example-editor>
+        <div class="sidebar">
+          <div id="error-list" role="list"></div>
+        </div>
+      </div>
+    </utrecht-page-body></utrecht-page-layout>
+  <style>
+    .split-screen {
+      display: flex;
+      flex-direction: row;
+      column-gap: max(var(--utrecht-focus-outline-width), 0);
+    }
 
-      example-editor {
-        flex-grow: 1;
-      }
+    example-editor {
+      flex-grow: 1;
+    }
 
-      .sidebar {
-        inline-size: 300px;
-      }
+    .sidebar {
+      inline-size: 300px;
+    }
 
-      #error-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        row-gap: 1em;
-        --utrecht-alert-border-width: 1px;
-        --utrecht-alert-border-color: currentColor;
-        --utrecht-alert-error-border-color: currentColor;
-        --utrecht-alert-info-border-color: currentColor;
-        --utrecht-alert-ok-border-color: currentColor;
-        --utrecht-alert-warning-border-color: currentColor;
-      }
+    #error-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      row-gap: 1em;
+      --utrecht-alert-border-width: 1px;
+      --utrecht-alert-border-color: currentColor;
+      --utrecht-alert-error-border-color: currentColor;
+      --utrecht-alert-info-border-color: currentColor;
+      --utrecht-alert-ok-border-color: currentColor;
+      --utrecht-alert-warning-border-color: currentColor;
+    }
 
-      .ProseMirror-focused,
-      .focus-ring:focus-visible {
-        --_utrecht-focus-ring-box-shadow: 0 0 0 var(--utrecht-focus-outline-width, 0)
-          var(--utrecht-focus-inverse-outline-color, transparent);
+    .ProseMirror-focused,
+    .focus-ring:focus-visible {
+      --_utrecht-focus-ring-box-shadow: 0 0 0 var(--utrecht-focus-outline-width, 0) var(--utrecht-focus-inverse-outline-color, transparent);
 
-        box-shadow: var(--_utrecht-focus-ring-box-shadow);
-        outline-color: var(--utrecht-focus-outline-color, revert);
-        outline-offset: var(--utrecht-focus-outline-offset, revert);
-        outline-style: var(--utrecht-focus-outline-style, revert);
-        outline-width: var(--utrecht-focus-outline-width, revert);
-        z-index: 1;
-      }
-    </style>
-  </body>
+      box-shadow: var(--_utrecht-focus-ring-box-shadow);
+      outline-color: var(--utrecht-focus-outline-color, revert);
+      outline-offset: var(--utrecht-focus-outline-offset, revert);
+      outline-style: var(--utrecht-focus-outline-style, revert);
+      outline-width: var(--utrecht-focus-outline-width, revert);
+      z-index: 1;
+    }
+  </style>
+</body>
+
 </html>

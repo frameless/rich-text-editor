@@ -25,6 +25,8 @@ import { UnorderedListItem } from './unordered-list-item.js';
 import { UnorderedList } from './unordered-list.js';
 import { Validation } from './validation.js';
 import EditorButtons from './editor-buttons.js';
+import UniqueID from '@tiptap/extension-unique-id'
+import { AccessibilityError } from './accessibility-error.js';
 
 class ExampleEditorElement extends HTMLElement {
   editor: Editor;
@@ -62,6 +64,10 @@ class ExampleEditorElement extends HTMLElement {
         UnorderedList,
         UnorderedListItem,
         Validation,
+        UniqueID.configure({
+          types:['heading']
+        }),
+        AccessibilityError,
       ],
       content,
     });

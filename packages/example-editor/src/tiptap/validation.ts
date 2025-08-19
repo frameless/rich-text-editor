@@ -174,7 +174,7 @@ const validateDocument = (doc: Node): Error[] => {
     }
     if (node.type.name === 'heading') {
       if (![1, 2, 3, 4, 5, 6].includes(node.attrs['level'])) {
-        errors.push(new HeadingLevelValidError());
+        errors.push(new HeadingLevelValidError(node));
       }
       if (isEmpty(node)) {
         errors.push(new HeadingEmptyError());

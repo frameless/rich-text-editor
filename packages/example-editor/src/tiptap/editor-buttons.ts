@@ -1,5 +1,4 @@
 import { Editor } from "@tiptap/core";
-import { UtrechtSelect } from "../custom-element/utrecht-select";
 
 export default function EditorButtons(editor:Editor, doc:Document) {
 

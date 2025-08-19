@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@tiptap/core": "2.11.7",
+    "@tiptap/extension-unique-id": "3.2.0",
     "@tiptap/pm": "2.11.7",
     "@utrecht/body-css": "1.2.0",
     "@utrecht/button-css": "2.3.1",
