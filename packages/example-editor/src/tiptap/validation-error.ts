@@ -1,18 +1,17 @@
-import { UtrechtHeading } from "../custom-element/utrecht-heading";
+//import { UtrechtHeading } from "../custom-element/utrecht-heading";
 
 export interface ValidationError extends Error {
   id: string;
-  elt?:any;
+ // elt?:any;
 }
 
 export class HeadingLevelValidError extends Error implements ValidationError {
   id = 'heading-level-valid';
-  elt:UtrechtHeading;
-  constructor(elt:UtrechtHeading) {
+  //elt:UtrechtHeading;
+  constructor(/*elt:UtrechtHeading*/) {
     super('Invalid heading level');
     //const editor = document.querySelector('example-editor');
-
-    this.elt = elt;
+    //this.elt = elt;
   }
 }
 export class HeadingEmptyError extends Error implements ValidationError {

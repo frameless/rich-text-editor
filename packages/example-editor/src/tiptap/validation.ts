@@ -82,7 +82,7 @@ const validateDocument = (doc: Node): Error[] => {
   const documentErrors = [];
 
   if (!isHeading1(doc.content.content[0])) {
-    console.log(doc.content.content[0]);
+    //console.log(doc.content.content[0]);
     documentErrors.push(new PageStartsWithHeadingOneError());
   }
 
@@ -174,7 +174,7 @@ const validateDocument = (doc: Node): Error[] => {
     }
     if (node.type.name === 'heading') {
       if (![1, 2, 3, 4, 5, 6].includes(node.attrs['level'])) {
-        errors.push(new HeadingLevelValidError(node));
+        errors.push(new HeadingLevelValidError());
       }
       if (isEmpty(node)) {
         errors.push(new HeadingEmptyError());

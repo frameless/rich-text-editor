@@ -3,7 +3,7 @@ import { defineUtrechtUnorderedList } from './custom-element/utrecht-unordered-l
 import { defineUtrechtUnorderedListItem } from './custom-element/utrecht-unordered-list-item.js';
 import { defineUtrechtOrderedList } from './custom-element/utrecht-ordered-list.js';
 import { defineUtrechtOrderedListItem } from './custom-element/utrecht-ordered-list-item.js';
-import { defineUtrechtHeading, UtrechtHeading } from './custom-element/utrecht-heading.js';
+import { defineUtrechtHeading } from './custom-element/utrecht-heading.js';
 import { defineExampleEditorElement } from './tiptap/example-editor.js';
 import { defineUtrechtLink } from './custom-element/utrecht-link.ts';
 import { defineUtrechtSafeLink } from './custom-element/utrecht-safe-link.ts';
@@ -24,8 +24,6 @@ defineUtrechtOrderedListItem();
 defineUtrechtLink();
 defineUtrechtSafeLink();
 defineCustomElements();
-
-const editor = document.querySelector('example-editor');
 
 document.addEventListener<any>('validationError', (evt: ValidationEvent) => {
   const result = document.getElementById('error-list');
@@ -147,18 +145,12 @@ document.addEventListener<any>('validationError', (evt: ValidationEvent) => {
 
     if (error) {
       message = ``;
-      if (error.url && e.elt) {
-        if(!e.elt) return false;
-
+      if (error.url) {
         message += `<utrecht-paragraph>${error.message}</utrecht-button-group>`;
         message += `<utrecht-button-group><utrecht-link href="${error.url}" target="help">Lees meer bij NL Design System</utrecht-link></utrecht-button-group>`;
-
-        const id = e.elt.attrs['id'];
-
-        // GOTCHA!!!
-        const element = document.querySelector(`[data-id='${id}']`);
       }
     }
     result.innerHTML += `<p><utrecht-alert type="error">${message}</utrecht-alert></p>`;
+
   });
 });
