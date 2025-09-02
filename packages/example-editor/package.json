@@ -19,28 +19,28 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "typescript": "5.8.2",
+    "typescript": "5.9.2",
     "vite": "6.2.0"
   },
   "dependencies": {
     "@tiptap/core": "2.11.7",
     "@tiptap/pm": "2.11.7",
-    "@utrecht/body-css": "1.2.0",
-    "@utrecht/heading-1-css": "1.5.0",
-    "@utrecht/heading-2-css": "1.5.0",
-    "@utrecht/heading-3-css": "1.5.0",
-    "@utrecht/heading-4-css": "1.5.0",
-    "@utrecht/heading-5-css": "1.5.0",
-    "@utrecht/heading-6-css": "1.5.0",
-    "@utrecht/link-css": "1.6.0",
+    "@utrecht/body-css": "1.2.1",
+    "@utrecht/heading-1-css": "1.5.1",
+    "@utrecht/heading-2-css": "1.5.1",
+    "@utrecht/heading-3-css": "1.5.1",
+    "@utrecht/heading-4-css": "1.5.1",
+    "@utrecht/heading-5-css": "1.5.1",
+    "@utrecht/heading-6-css": "1.5.1",
+    "@utrecht/link-css": "1.6.1",
     "@utrecht/ordered-list-css": "1.5.1",
-    "@utrecht/page-body-css": "0.1.0",
-    "@utrecht/page-layout-css": "1.1.0",
-    "@utrecht/paragraph-css": "2.3.0",
-    "@utrecht/root-css": "1.2.0",
-    "@utrecht/table-css": "1.5.0",
-    "@utrecht/unordered-list-css": "1.5.0",
-    "@utrecht/web-component-library-stencil": "3.4.0",
-    "prosemirror-model": "1.25.1"
+    "@utrecht/page-body-css": "0.1.1",
+    "@utrecht/page-layout-css": "1.1.1",
+    "@utrecht/paragraph-css": "2.3.1",
+    "@utrecht/root-css": "1.2.1",
+    "@utrecht/table-css": "1.6.1",
+    "@utrecht/unordered-list-css": "1.5.1",
+    "@utrecht/web-component-library-stencil": "3.6.0",
+    "prosemirror-model": "1.25.3"
   }
 }
