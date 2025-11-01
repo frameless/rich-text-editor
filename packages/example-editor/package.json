@@ -19,7 +19,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "typescript": "5.8.2",
+    "typescript": "5.9.3",
     "vite": "6.2.0"
   },
   "dependencies": {
@@ -40,7 +40,7 @@
     "@utrecht/root-css": "1.2.0",
     "@utrecht/table-css": "1.5.0",
     "@utrecht/unordered-list-css": "1.5.0",
-    "@utrecht/web-component-library-stencil": "3.4.0",
-    "prosemirror-model": "1.25.1"
+    "@utrecht/web-component-library-stencil": "3.7.0",
+    "prosemirror-model": "1.25.4"
   }
 }
